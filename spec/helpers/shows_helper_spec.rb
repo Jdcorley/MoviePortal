@@ -11,5 +11,10 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe ShowsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe 'ShowsHelper#popular_movies' do
+    it 'returns an api_key' do
+
+    end
+  end
 end
