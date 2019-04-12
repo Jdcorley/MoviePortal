@@ -13,7 +13,14 @@ class ShowsController < ApplicationController
   end
 
   def index
-    @shows = Show.all
+    if params[:search]
+      @search_results_shows = Show.search_by_name(params[:search])
+      respond_to do |format|
+        format.js { render partial: 'search-results'}
+      end
+    else
+      @shows = Show.all
+    end
   end
 
   def new
