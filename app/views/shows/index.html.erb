@@ -1,8 +1,8 @@
-<h1>Hello World!</h1>
 <div class="main-card">
-  <%= @shows.each do |show| %>
-    <ul>
-      <li><%= show.name %></li>
-    </ul>
-  <% end  %>
+  <h1>Welcome to the Movie Portal!</h1>
+    <div class="grid-container">
+      <% @shows.each do |show| %>
+        <div class="grid-item"><%= show.name %></div>
+      <% end  %>
+    </div>
 </div>

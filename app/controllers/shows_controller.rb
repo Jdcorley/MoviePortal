@@ -13,7 +13,7 @@ class ShowsController < ApplicationController
   end
 
   def index
-    @show = Show.all
+    @shows = Show.all
   end
 
   def new
