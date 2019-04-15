@@ -23,21 +23,16 @@ class ShowsController < ApplicationController
     end
   end
 
+  def show
+    @show = @shows.find(params[:id])
+  end
+
   def new
     @show = Show.new
   end
 
   def create
     show = Show.create(show_params)
-  end
-
-  def edit
-    @show = Show.find(params[:id])
-  end
-
-  def update
-    @show = Show.find(params[:id])
-    @show.update(show_params)
   end
 
   private

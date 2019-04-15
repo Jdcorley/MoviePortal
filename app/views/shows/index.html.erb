@@ -4,7 +4,7 @@
 
     <div class="grid-container" id="shows-grid">
       <% @shows.each do |show| %>
-        <div class="grid-item"><%= show.name %></div>
+        <div class="grid-item"><%= link_to "#{show.name}", show %></div>
       <% end  %>
     </div>
 </div>
