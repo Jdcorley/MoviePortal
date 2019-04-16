@@ -25,6 +25,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'will_paginate', '~> 3.1.0'
 gem 'kaminari'
+gem 'opal-rails'
+gem 'jquery-rails'
+gem 'pg_search'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

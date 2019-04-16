@@ -1,8 +1,14 @@
 <div class="main-card">
-  <h1>Welcome to the Movie Portal!</h1>
-    <div class="grid-container">
+  <h1 id="home-header">Welcome to the Movie Portal!</h1>
+  <%= render partial: "search" %>
+
+    <div class="grid-container" id="shows-grid">
       <% @shows.each do |show| %>
-        <div class="grid-item"><%= show.name %></div>
+        <div class="grid-item"><%= link_to "#{show.name}", show %></div>
       <% end  %>
     </div>
+</div>
+
+<div class="grid-container" id="search-results">
+
 </div>

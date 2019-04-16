@@ -17,6 +17,10 @@ ActiveRecord::Schema.define(version: 2019_04_09_203944) do
 
   create_table "shows", force: :cascade do |t|
     t.string "name"
+    t.float "vote_average"
+    t.string "origin_country"
+    t.date "first_air_date"
+    t.string "overview"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
