@@ -4,11 +4,16 @@ class ShowsController < ApplicationController
   before_action :save_shows
 
   def save_shows
-    @popular_shows = ShowsHelper.popular_shows
     @shows = Show.all
+    @popular_shows = ShowsHelper.popular_shows
     @popular_shows.each do |show|
-      next unless @shows.find_by(name: show).nil?
-        Show.create(name: show).save!
+      next unless @shows.find_by(name: show["name"]).nil?
+        Show.create(name: show["name"],
+                    vote_average: show["vote_average"],
+                    origin_country: show["origin_country"],
+                    first_air_date: show["first_air_date"],
+                    overview: show["overview"]
+        ).save!
     end
   end
 
@@ -38,6 +43,6 @@ class ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:name)
+    params.require(:show).permit(:name, :vote_average, :origin_country, :first_air_date, :overview)
   end
 end
