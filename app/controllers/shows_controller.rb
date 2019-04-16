@@ -21,7 +21,7 @@ class ShowsController < ApplicationController
     if params[:search]
       @search_results_shows = Show.search_by_name(params[:search])
       respond_to do |format|
-        format.js { render partial: 'search-results'}
+        format.js { render partial: 'shared/search-results'}
       end
     else
       @shows = Show.all
@@ -32,7 +32,7 @@ class ShowsController < ApplicationController
     if params[:search]
       @search_results_shows = Show.search_by_name(params[:search])
       respond_to do |format|
-        format.js { render partial: 'search-results'}
+        format.js { render partial: 'shared/search-results'}
       end
     else
       @show = @shows.find(params[:id])
