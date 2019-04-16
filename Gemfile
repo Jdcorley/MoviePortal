@@ -28,6 +28,7 @@ gem 'kaminari'
 gem 'opal-rails'
 gem 'jquery-rails'
 gem 'pg_search'
+gem 'corley_view_tool', '~> 0.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
