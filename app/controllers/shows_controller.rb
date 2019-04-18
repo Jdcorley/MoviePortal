@@ -8,12 +8,11 @@ class ShowsController < ApplicationController
     @popular_shows = ShowsHelper.popular_shows
     @popular_shows.each do |show|
       next unless @shows.find_by(name: show["name"]).nil?
-        Show.create(name: show["name"],
-                    vote_average: show["vote_average"],
-                    origin_country: show["origin_country"],
-                    first_air_date: show["first_air_date"],
-                    overview: show["overview"]
-        ).save!
+      Show.create(name: show["name"],
+                  vote_average: show["vote_average"],
+                  origin_country: show["origin_country"],
+                  first_air_date: show["first_air_date"],
+                  overview: show["overview"]).save!
     end
   end
 
@@ -21,7 +20,7 @@ class ShowsController < ApplicationController
     if params[:search]
       @search_results_shows = Show.search_by_name(params[:search])
       respond_to do |format|
-        format.js { render partial: 'search-results'}
+        format.js { render partial: 'shared/search-results' }
       end
     else
       @shows = Show.all
@@ -32,7 +31,7 @@ class ShowsController < ApplicationController
     if params[:search]
       @search_results_shows = Show.search_by_name(params[:search])
       respond_to do |format|
-        format.js { render partial: 'search-results'}
+        format.js { render partial: 'shared/search-results' }
       end
     else
       @show = @shows.find(params[:id])
