@@ -1,9 +1,8 @@
 <div class="main-card">
+  <h1>Search Results</h1>
   <div class="grid-container", id="shows-grid">
     <% @search_results_shows.each do |show| %>
-      <div class="searched-result"><%= link_to "#{show.name}", show %></div>
+      <div class="grid-item"><%= link_to "#{show.name}", show %></div>
     <% end  %>
-    <div class="grid-container", id="search-results">
-    </div>
   </div>
 </div>
