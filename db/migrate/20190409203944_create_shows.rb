@@ -6,6 +6,7 @@ class CreateShows < ActiveRecord::Migration[5.2]
       t.string :origin_country
       t.date :first_air_date
       t.string :overview
+      t.string :poster_path
       t.timestamps
     end
   end

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_203944) do
     t.string "origin_country"
     t.date "first_air_date"
     t.string "overview"
+    t.string "poster_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
