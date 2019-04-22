@@ -2,7 +2,7 @@
   <h1 id="home-header">Welcome to the Movie Portal!</h1>
     <div class="grid-container", id="shows-grid">
       <% @shows.each do |show| %>
-        <div class="grid-item"><%= link_to "#{show.name}", show %></div>
+        <div class="grid-item-link"><%= link_to "#{show.name}", show %></div>
       <% end  %>
     </div>
 </div>

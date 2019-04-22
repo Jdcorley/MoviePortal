@@ -3,10 +3,6 @@ h1 {
   padding: 20px;
 }
 
-#show-instance {
-
-}
-
 #show-name {
   display: flex;
   justify-content: center;
@@ -147,4 +143,24 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
+}
+
+/* unvisited link */
+.grid-item-link a:link {
+  color: #1efff7;
+}
+
+/* visited link */
+.grid-item-link a:visited {
+  color: #008067;
+}
+
+/* mouse over link */
+.grid-item-link a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+.grid-item-link a:active {
+  color: blue;
 }
