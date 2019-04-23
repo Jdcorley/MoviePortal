@@ -2,7 +2,7 @@
   <h1>Search Results</h1>
   <div class="grid-container", id="shows-grid">
     <% @search_results_shows.each do |show| %>
-      <div class="grid-item"><%= link_to "#{show.name}", show %></div>
+      <div class="grid-item-link"><%= link_to "#{show.name}", show %></div>
     <% end  %>
   </div>
 </div>

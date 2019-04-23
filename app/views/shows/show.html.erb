@@ -1,8 +1,14 @@
 <div  id="show-instance">
+
   <h1 id="show-name"><%= @show.name %></h1>
   <div id="show-poster"><%= image_tag(ShowsHelper.image_url_builder(@base_url, @show.poster_path)) %></div>
-  <div id="show-rating"><%= @show.vote_average %></div>
-  <div id="show-country-origin"><%= @show.origin_country %></div>
-  <div id="shows-first-air-date"><%= @show.first_air_date %></div>
+
   <div id="show-overview"><%= @show.overview %></div>
+
+  <div id="more-details">
+    <div id="show-rating"><%= @show.vote_average %></div>
+    <div id="show-country-origin"><%= @show.origin_country %></div>
+    <div id="shows-first-air-date"><%= @show.first_air_date %></div>
+  </div>
+
 </div>
