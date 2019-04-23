@@ -3,30 +3,38 @@ h1 {
   padding: 20px;
 }
 
+#show-poster {
+  display: flex;
+  justify-content: center;
+  margin: 20px, 20px, 20px 20px;
+}
+
 #show-name {
   display: flex;
   justify-content: center;
+  margin: 20px 20px 20px 20px;
 }
 #show-country-origin{
   display: flex;
   justify-content: center;
+  margin: 20px 20px 20px 20px;
 }
 #shows-first-air-date{
   display: flex;
   justify-content: center;
+  margin: 20px 20px 20px 20px;
 }
 #show-rating{
   display: flex;
   justify-content: center;
+  margin: 20px 20px 20px 20px;
 }
 #show-overview {
   display: flex;
   justify-content: center;
+  margin: 20px 20px 20px 20px;
 }
-.main-card {
-  justify-content: center;
-  height: 100%;
-}
+
 #about-page-paragraph {
   display: grid;
   grid-template-columns: auto;
@@ -50,9 +58,8 @@ h1 {
   height: 400px;
   align-content: center;
   justify-content: center;
+  margin: auto auto auto auto;
 }
-
-
 
 /* Footer */
 .footer {
@@ -68,7 +75,6 @@ h1 {
 }
 
 // navbar styling
-
 * {box-sizing: border-box;}
 
 body {
