@@ -12,9 +12,4 @@ require 'rails_helper'
 # end
 RSpec.describe ShowsHelper, type: :helper do
 
-  describe 'ShowsHelper#popular_movies' do
-    it 'returns an api_key' do
-
-    end
-  end
 end

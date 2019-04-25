@@ -31,17 +31,14 @@ class Show < ApplicationRecord
   end
 
   def self.popular_shows
-    fix_countries(filter_attributes($show_attributes))
-  end
-
-  def self.filter_attributes(results)
     show_objects = []
-    results.each do |show|
+    $show_data_response.each do |show|
       show.select do |k, _v|
         $attributes.value?(k)
       end
       show_objects << show
     end
+    fix_countries(show_objects)
   end
 
   def self.fix_countries(show_objects)

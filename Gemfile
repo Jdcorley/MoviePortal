@@ -15,7 +15,6 @@ gem 'jquery-rails'
 gem 'pg_search'
 gem 'corley_view_tool', '~> 0.1.0'
 gem "normalize_country"
-
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -30,12 +29,14 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'factory_bot_rails'
 end
 
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'webmock'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
