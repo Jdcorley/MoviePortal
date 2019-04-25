@@ -32,7 +32,7 @@ class Show < ApplicationRecord
 
   def self.popular_shows
     show_objects = []
-    $show_data_response.each do |show|
+    $show_attributes.each do |show|
       show.select do |k, _v|
         $attributes.value?(k)
       end
